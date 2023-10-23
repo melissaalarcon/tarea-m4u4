@@ -1,0 +1,18 @@
+{{#if conocido}}
+<h3>Hola, {{nombre}} <a href="/salir">Salir</a></h3>
+{{/if}}
+
+{{#unless conocido}}
+<form action="/ingresar" method="post">
+    <div class="myContainer text-center align-items-center">
+            <div class="reception align-items-center">
+                <h3>Iniciar sesión</h3>
+            </div>
+        <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Username</label>
+            <input type="text" name="nombre" class="form-control" id="exampleInputUsername1">
+        </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+    </div>
+</form>
+{{/unless}}
